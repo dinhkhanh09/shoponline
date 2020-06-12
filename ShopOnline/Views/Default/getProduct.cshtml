@@ -1,0 +1,18 @@
+﻿@model List<ShopOnline.Models.product>
+    
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 you-para">
+                <a href="/@ViewBag.meta/@item.meta/@item.id" ><img class="img-product img-responsive @*pic-in*@" src="~/Content/images/@item.img" alt=" "></a>
+                <div class="you-in">
+                    <span>15<label>%</label></span>
+                    <small>off</small>
+                </div>
+                <p>@item.name</p>
+                <span>@item.price  | <label class="cat-in"> </label> <a href="#">Add to Cart </a></span>
+            </div>
+        }
+
+
+        <div class="clearfix"> </div>
+   

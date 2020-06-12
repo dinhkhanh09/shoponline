@@ -1,0 +1,57 @@
+﻿@model ShopOnline.Models.category
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<div class="content">
+    <div class="container">
+        <div class="  col-m-on">
+            <!---->
+            <div class="in-line">
+                <div class="para-all">
+                    <h3>@Model.name</h3>
+                    <p>Check our all latest products in this section.</p>
+                </div>
+                <div class="lady-on">
+                    @{Html.RenderAction("getProduct", "Default", new {id = Model.id, metatitle = @Model.meta });}
+
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div class="lady-in-on">
+           
+            <script type="text/javascript">
+                $(window).load(function () {
+                    $("#flexiselDemo1").flexisel({
+                        visibleItems: 4,
+                        animationSpeed: 1000,
+                        autoPlay: true,
+                        autoPlaySpeed: 3000,
+                        pauseOnHover: true,
+                        enableResponsiveBreakpoints: true,
+                        responsiveBreakpoints: {
+                            portrait: {
+                                changePoint: 480,
+                                visibleItems: 1
+                            },
+                            landscape: {
+                                changePoint: 640,
+                                visibleItems: 2
+                            },
+                            tablet: {
+                                changePoint: 768,
+                                visibleItems: 3
+                            }
+                        }
+                    });
+
+                });
+            </script>
+            <script type="text/javascript" src="~/Scripts/js/jquery.flexisel.js"></script>
+        </div>
+    </div>
+</div>
+

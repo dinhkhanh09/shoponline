@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<!--content-->
+<div class="content">
+    <div class="container">
+        <div class="women-in">
+            <div class="col-md-9 col-d">
+                <div class="banner">
+                    
+                    @*<div class="banner-matter">
+                        <label>Collection</label>
+                        <h2>Summmer</h2>
+                        <p>Helping you look cool</p>
+
+                    </div>
+                    <div class="you">
+                        <span>40<label>%</label></span>
+                        <small>off</small>
+                    </div>
+                    <p class="para-in">Some text regarding the featured product.</p>*@
+                </div>
+                <!---->
+                <div class="in-line">
+                    @{ Html.RenderAction("getCategory", "Default");}
+                </div>
+            </div>
+            <div class="col-md-3 col-m-left">
+                <div class="in-left">
+                    <p class="code">@*Cool COLLECTIONS*@</p>
+                    @*<div class="cool">
+                    </div>*@
+                </div>
+                <div class="discount">
+                    <a href="@Url.Action("Index","Event")"><img class="img-responsive pic-in" src="~/Content/images/p2.jpg" alt=" ">	</a>
+                    <p class="no-more">Exclusive <b>discount</b> <span>Womens wear</span></p>
+                    <a href="#" class="know-more">know more</a>
+                </div>
+                <div class="discount">
+                    <a href="@Url.Action("Index","Contact")"><img class="img-responsive pic-in" src="~/Content/images/p3.jpg" alt=" "></a>
+                    <p class="no-more no-get">Get Exclusive <b>discount on</b> <span>Ladies wear</span></p>
+                    <a href="#" class="know-more">know more</a>
+                </div>
+                @{ Html.RenderAction("getNew", "Default");}
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <!---->
+        <div class="lady-in-on">
+            <div class="buy-an">
+                <h3>OTHER PRODUCTS</h3>
+                <p>Check our all latest products in this section.</p>
+            </div>
+            <ul id="flexiselDemo1">
+                <li>
+                    <a href="#"><img class="img-responsive women" src="~/Content/images/pic.jpg" alt=""></a>
+                    <div class="hide-in">
+                        <p>Premium Denim Women's Hidden</p>
+                        <span>$179.00  |  <a href="#">Buy Now </a></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img class="img-responsive women" src="~/Content/images/pic1.jpg" alt=""></a>
+                    <div class="hide-in">
+                        <p>Premium Denim Women's Hidden</p>
+                        <span>$179.00  |  <a href="#">Buy Now </a></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img class="img-responsive women" src="~/Content/images/pic.jpg" alt=""></a>
+                    <div class="hide-in">
+                        <p>Premium Denim Women's Hidden</p>
+                        <span>$179.00  |  <a href="#">Buy Now </a></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img class="img-responsive women" src="~/Content/images/pic2.jpg" alt=""></a>
+                    <div class="hide-in">
+                        <p>Premium Denim Women's Hidden</p>
+                        <span>$179.00  |  <a href="#">Buy Now </a></span>
+                    </div></a>
+                </li>
+            </ul>
+            <script type="text/javascript">
+		$(window).load(function() {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 4,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+		    	responsiveBreakpoints: {
+		    		portrait: {
+		    			changePoint:480,
+		    			visibleItems: 1
+		    		},
+		    		landscape: {
+		    			changePoint:640,
+		    			visibleItems: 2
+		    		},
+		    		tablet: {
+		    			changePoint:768,
+		    			visibleItems: 3
+		    		}
+		    	}
+		    });
+
+		});
+            </script>
+            <script type="text/javascript" src="~/Scripts/js/jquery.flexisel.js"></script>
+        </div>
+    </div>
+</div>
+
